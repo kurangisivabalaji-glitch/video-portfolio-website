@@ -363,16 +363,32 @@ function Preloader({ onComplete }) {
   const [exiting, setExiting] = useState(false);
 
   useEffect(() => {
-    const exitTimer = setTimeout(() => setExiting(true), 1900);
-    const completeTimer = setTimeout(() => onComplete(), 2850);
+    const exitTimer = setTimeout(() => setExiting(true), 1200);
+    const completeTimer = setTimeout(() => {
+      if (onComplete) onComplete();
+    }, 1950);
+
     return () => {
       clearTimeout(exitTimer);
       clearTimeout(completeTimer);
     };
-  }, [onComplete]);
+  }, []);
+
+  const handleDismiss = () => {
+    setExiting(true);
+    setTimeout(() => {
+      if (onComplete) onComplete();
+    }, 300);
+  };
 
   return (
-    <div className={`preloader-overlay ${exiting ? 'preloader-exit' : ''}`} role="status" aria-label="Loading portfolio">
+    <div
+      onClick={handleDismiss}
+      className={`preloader-overlay ${exiting ? 'preloader-exit' : ''} cursor-pointer`}
+      role="status"
+      aria-label="Loading portfolio (Click to skip)"
+      title="Click anywhere to enter"
+    >
       <div className={`relative select-none text-center ${exiting ? 'preloader-logo-exit' : ''}`}>
         <h1 className="font-syne text-6xl sm:text-8xl md:text-9xl font-black tracking-tighter text-black/25">
           Balaji.
@@ -2747,7 +2763,7 @@ function App() {
       setCertificates(DEFAULT_CERTIFICATES);
       localStorage.setItem('balaji_portfolio_projects', JSON.stringify(DEFAULT_PROJECTS));
       localStorage.setItem('balaji_portfolio_certificates', JSON.stringify(DEFAULT_CERTIFICATES));
-              &#128293; Sync to Cloud
+      // Sync to Cloud
       FirestoreService.seedProjects(DEFAULT_PROJECTS);
       FirestoreService.seedCertificates(DEFAULT_CERTIFICATES);
     }
