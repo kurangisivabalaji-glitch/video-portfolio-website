@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="qBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="qCard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(30, 27, 75, 0.85)" />
+      <stop offset="100%" stop-color="rgba(15, 23, 42, 0.75)" />
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+    <linearGradient id="correctGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#qBg)" />
+  <circle cx="200" cy="150" r="140" fill="#a855f7" opacity="0.15" />
+  <circle cx="650" cy="350" r="160" fill="#ec4899" opacity="0.1" />
+
+  <!-- Main Card -->
+  <rect x="150" y="55" width="500" height="390" rx="20" fill="url(#qCard)" stroke="rgba(168, 85, 247, 0.4)" stroke-width="1.5" />
+
+  <!-- Quiz Header -->
+  <rect x="180" y="80" width="100" height="28" rx="14" fill="rgba(168, 85, 247, 0.2)" stroke="#a855f7" stroke-width="1" />
+  <text x="230" y="99" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#c084fc">Q 05 / 10</text>
+
+  <!-- Timer -->
+  <rect x="520" y="80" width="100" height="28" rx="14" fill="rgba(236, 72, 153, 0.2)" stroke="#ec4899" stroke-width="1" />
+  <text x="570" y="99" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#f472b6">⏱ 00:45</text>
+
+  <!-- Progress bar -->
+  <rect x="180" y="125" width="440" height="6" rx="3" fill="rgba(255, 255, 255, 0.1)" />
+  <rect x="180" y="125" width="220" height="6" rx="3" fill="url(#purpleGrad)" />
+
+  <!-- Question -->
+  <text x="180" y="170" font-family="'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="700" fill="#f8fafc">Which DOM method is used to select an</text>
+  <text x="180" y="196" font-family="'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="700" fill="#f8fafc">element by its CSS selector in JavaScript?</text>
+
+  <!-- Option A -->
+  <rect x="180" y="220" width="440" height="42" rx="10" fill="rgba(15, 23, 42, 0.7)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1" />
+  <text x="205" y="246" font-family="'Segoe UI', sans-serif" font-size="14" fill="#cbd5e1">A. document.getElementByClass()</text>
+
+  <!-- Option B (Selected/Correct) -->
+  <rect x="180" y="272" width="440" height="42" rx="10" fill="rgba(16, 185, 129, 0.15)" stroke="#10b981" stroke-width="1.5" />
+  <text x="205" y="298" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="600" fill="#34d399">B. document.querySelector()</text>
+  <circle cx="595" cy="293" r="10" fill="#10b981" />
+  <path d="M591 293 L594 296 L600 290" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+
+  <!-- Option C -->
+  <rect x="180" y="324" width="440" height="42" rx="10" fill="rgba(15, 23, 42, 0.7)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1" />
+  <text x="205" y="350" font-family="'Segoe UI', sans-serif" font-size="14" fill="#cbd5e1">C. document.searchSelector()</text>
+
+  <!-- Option D -->
+  <rect x="180" y="376" width="440" height="42" rx="10" fill="rgba(15, 23, 42, 0.7)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1" />
+  <text x="205" y="402" font-family="'Segoe UI', sans-serif" font-size="14" fill="#cbd5e1">D. document.findCSS()</text>
+</svg>

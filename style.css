@@ -1,0 +1,419 @@
+/* ==========================================================================
+   Leeshark Luxury Portfolio Stylesheet
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Typography & Text Utilities
+   -------------------------------------------------------------------------- */
+.font-syne {
+  font-family: 'Syne', sans-serif;
+}
+
+.font-sans {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.font-hand {
+  font-family: 'Caveat', cursive;
+}
+
+/* Transparent outline typography for Hero */
+.text-stroke {
+  color: transparent !important;
+  -webkit-text-stroke: 2px #ffffff;
+  text-stroke: 2px #ffffff;
+}
+
+@media (max-width: 768px) {
+  .text-stroke {
+    -webkit-text-stroke: 1.5px #ffffff;
+    text-stroke: 1.5px #ffffff;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. Preloader Animations (Framer Motion / CSS Quality)
+   -------------------------------------------------------------------------- */
+.preloader-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #FF2A2A;
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  will-change: transform;
+}
+
+/* Water fill effect using upward clip-path animation over 1.6s */
+.preloader-text-fg {
+  position: absolute;
+  inset: 0;
+  color: #ffffff;
+  clip-path: inset(100% 0 0 0);
+  animation: waterFill 1.6s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+@keyframes waterFill {
+  0% {
+    clip-path: inset(100% 0 0 0);
+  }
+  100% {
+    clip-path: inset(0% 0 0 0);
+  }
+}
+
+/* Shutter upward exit */
+.preloader-exit {
+  animation: shutterUp 0.85s cubic-bezier(0.76, 0, 0.24, 1) 2.0s forwards;
+}
+
+@keyframes shutterUp {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+/* Logo scale down & fade out during exit */
+.preloader-logo-exit {
+  animation: logoExit 0.7s cubic-bezier(0.76, 0, 0.24, 1) 1.9s forwards;
+}
+
+@keyframes logoExit {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. Floating Navbar Links & Underline Animation
+   -------------------------------------------------------------------------- */
+.nav-link {
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #FF2A2A;
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 9999px;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   4. Glassmorphism Design Elements
+   -------------------------------------------------------------------------- */
+.glass-panel {
+  background: rgba(18, 18, 18, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glass-btn {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-btn:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 0 20px rgba(255, 42, 42, 0.3);
+}
+
+/* Circular Play Reel Button & Red Glow Effect */
+.play-reel-btn {
+  position: relative;
+  background: rgba(17, 17, 17, 0.6);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.play-reel-btn:hover {
+  transform: scale(1.08);
+  border-color: #FF2A2A;
+  box-shadow: 0 0 35px rgba(255, 42, 42, 0.7), inset 0 0 15px rgba(255, 42, 42, 0.3);
+}
+
+/* --------------------------------------------------------------------------
+   5. About Section: Lanyard & ID Badge Styling
+   -------------------------------------------------------------------------- */
+.lanyard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* Realistic black woven strap */
+.lanyard-strap {
+  width: 24px;
+  height: 90px;
+  background: repeating-linear-gradient(
+    45deg,
+    #181818,
+    #181818 4px,
+    #242424 4px,
+    #242424 8px
+  );
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  position: relative;
+  z-index: 10;
+}
+
+/* Metallic clip holding the badge */
+.lanyard-clip {
+  width: 32px;
+  height: 22px;
+  background: linear-gradient(180deg, #d1d5db 0%, #6b7280 50%, #4b5563 100%);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 11;
+  margin-top: -2px;
+}
+
+.lanyard-clip-ring {
+  width: 14px;
+  height: 14px;
+  border: 3px solid #9ca3af;
+  border-radius: 50%;
+  margin: -6px auto 0 auto;
+}
+
+/* Developer ID Badge Card tilted at -3 degrees with realistic shadow */
+.id-badge-card {
+  transform: rotate(-3deg);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+  box-shadow: -15px 25px 40px rgba(0, 0, 0, 0.45), 0 5px 15px rgba(0, 0, 0, 0.2);
+  will-change: transform;
+}
+
+.id-badge-card:hover {
+  transform: rotate(0deg) translateY(-4px);
+  box-shadow: -5px 30px 50px rgba(0, 0, 0, 0.55), 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Abstract black star pulse animation */
+@keyframes starPulse {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.75;
+  }
+  50% {
+    transform: scale(1.18) rotate(14deg);
+    opacity: 1;
+  }
+}
+
+.star-pulse {
+  animation: starPulse 4s ease-in-out infinite;
+}
+
+.star-pulse-delayed {
+  animation: starPulse 4.5s ease-in-out infinite 1.5s;
+}
+
+/* --------------------------------------------------------------------------
+   6. Service / Process Timeline (How We Work)
+   -------------------------------------------------------------------------- */
+.process-grid-bg {
+  background-color: #ffffff;
+  background-image: 
+    linear-gradient(to right, #f1f5f9 1px, transparent 1px),
+    linear-gradient(to bottom, #f1f5f9 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+/* Floating Process Tag Cards (Luggage / Conference Tag Style) */
+.process-tag-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 2rem;
+  box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.08), 0 5px 15px rgba(0, 0, 0, 0.04);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  cursor: pointer;
+}
+
+.process-tag-card:hover {
+  transform: scale(1.03) translateY(-4px) !important;
+  box-shadow: 0 25px 45px -5px rgba(0, 0, 0, 0.14);
+}
+
+/* Active card turning bright red #FF2A2A with red glowing shadow */
+.process-tag-card.active-card {
+  background-color: #FF2A2A !important;
+  border-color: #FF2A2A !important;
+  color: #ffffff !important;
+  box-shadow: 0 25px 50px rgba(255, 42, 42, 0.38), 0 10px 20px rgba(255, 42, 42, 0.25) !important;
+}
+
+.process-tag-card.active-card .tag-num {
+  color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.process-tag-card.active-card .tag-title {
+  color: #ffffff !important;
+}
+
+.process-tag-card.active-card .tag-desc {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.process-tag-card.active-card .tag-hole {
+  background-color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Tag Hole Punch detail */
+.tag-hole {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #f8fafc;
+  border: 2px solid #cbd5e1;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
+}
+
+/* Rotations for natural organic look */
+.rotate-cw {
+  transform: rotate(2.5deg);
+}
+
+.rotate-ccw {
+  transform: rotate(-2.5deg);
+}
+
+/* --------------------------------------------------------------------------
+   7. Footer Giant Typography Glow
+   -------------------------------------------------------------------------- */
+.footer-hero-text {
+  transition: text-shadow 0.4s ease, color 0.4s ease, letter-spacing 0.4s ease;
+  letter-spacing: -0.05em;
+}
+
+.footer-hero-text:hover {
+  color: #ffffff !important;
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.3), 0 0 60px rgba(255, 42, 42, 0.4);
+}
+
+/* --------------------------------------------------------------------------
+   8. Owner Mode Bar & Admin Actions
+   -------------------------------------------------------------------------- */
+.owner-bar {
+  background: linear-gradient(90deg, #18181b 0%, #27272a 100%);
+  border-bottom: 1px solid #3f3f46;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 60;
+}
+
+.owner-action-badge {
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 9999px;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-family: 'JetBrains Mono', monospace;
+  transition: all 0.2s ease;
+}
+
+.owner-action-badge:hover {
+  background: #FF2A2A;
+  color: #ffffff;
+  border-color: #FF2A2A;
+  transform: scale(1.05);
+}
+
+/* --------------------------------------------------------------------------
+   9. Modal Dialogs & Lightbox
+   -------------------------------------------------------------------------- */
+.modal-overlay-luxury {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(12px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal-content-luxury {
+  background: #18181b;
+  border: 1px solid #3f3f46;
+  border-radius: 1.5rem;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7);
+  max-height: 90vh;
+  overflow-y: auto;
+  width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   10. Gallery & Skills Cards
+   -------------------------------------------------------------------------- */
+.gallery-card {
+  background: #18181b;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 42, 42, 0.4);
+  box-shadow: 0 20px 40px -15px rgba(255, 42, 42, 0.2);
+}
+
+.skill-pill {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-family: 'JetBrains Mono', monospace;
+  transition: all 0.25s ease;
+}
+
+.skill-pill:hover {
+  background: rgba(255, 42, 42, 0.15);
+  border-color: #FF2A2A;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+

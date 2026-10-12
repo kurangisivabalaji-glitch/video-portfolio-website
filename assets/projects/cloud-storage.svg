@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="cloudBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05192d" />
+      <stop offset="100%" stop-color="#020817" />
+    </linearGradient>
+    <linearGradient id="cloudGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0ea5e9" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#cloudBg)" />
+  <circle cx="400" cy="240" r="200" fill="#0ea5e9" opacity="0.1" />
+
+  <!-- Cloud Main Vault Frame -->
+  <rect x="200" y="70" width="400" height="350" rx="20" fill="#0f172a" stroke="rgba(14, 165, 233, 0.4)" stroke-width="2" />
+  
+  <!-- Header -->
+  <rect x="200" y="70" width="400" height="45" rx="20" fill="#1e293b" />
+  <text x="230" y="98" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#38bdf8">â˜ CloudVault SaaS â€” S3 &amp; AES-256</text>
+
+  <!-- Big Cloud Graphic -->
+  <path d="M400 150 C370 150 350 170 345 195 C330 195 315 210 315 228 C315 246 330 260 348 260 L452 260 C468 260 482 248 482 232 C482 216 468 204 452 204 C450 174 430 150 400 150 Z" fill="url(#cloudGrad)" />
+  <text x="400" y="215" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="18" fill="#ffffff">ðŸ”’</text>
+
+  <!-- File Upload Items -->
+  <rect x="230" y="280" width="340" height="42" rx="8" fill="#1e293b" />
+  <text x="250" y="306" font-family="sans-serif" font-size="13" fill="#ffffff">dataset_production_v3.parquet</text>
+  <text x="545" y="306" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="12" fill="#38bdf8">1.2 GB â€¢ 100%</text>
+
+  <rect x="230" y="335" width="340" height="42" rx="8" fill="#1e293b" />
+  <text x="250" y="361" font-family="sans-serif" font-size="13" fill="#ffffff">enterprise_contracts_signed.pdf</text>
+  <text x="545" y="361" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="12" fill="#10b981">Encrypted</text>
+</svg>

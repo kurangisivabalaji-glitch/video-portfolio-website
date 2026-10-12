@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="aiBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="aiGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF2A2A" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#aiBg)" />
+  <circle cx="400" cy="220" r="220" fill="#a855f7" opacity="0.08" />
+  <circle cx="250" cy="300" r="160" fill="#FF2A2A" opacity="0.07" />
+
+  <!-- Code / AI Terminal Window -->
+  <rect x="180" y="60" width="440" height="370" rx="20" fill="url(#cardGrad)" stroke="rgba(168, 85, 247, 0.4)" stroke-width="2" />
+  
+  <!-- Window Header -->
+  <rect x="180" y="60" width="440" height="42" rx="20" fill="#0f172a" />
+  <circle cx="210" cy="81" r="6" fill="#ef4444" />
+  <circle cx="230" cy="81" r="6" fill="#f59e0b" />
+  <circle cx="250" cy="81" r="6" fill="#10b981" />
+  <text x="400" y="86" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="12" fill="#94a3b8">AI Resume &amp; ATS Career Engine</text>
+
+  <!-- Brain / Neural Icon -->
+  <circle cx="400" cy="180" r="48" fill="url(#aiGlow)" opacity="0.2" />
+  <circle cx="400" cy="180" r="32" fill="url(#aiGlow)" />
+  <text x="400" y="188" text-anchor="middle" font-family="sans-serif" font-size="24" fill="#ffffff">âš¡</text>
+
+  <!-- ATS Score Gauge -->
+  <rect x="230" y="250" width="340" height="56" rx="12" fill="#020617" stroke="rgba(255,255,255,0.1)" />
+  <text x="250" y="284" font-family="'JetBrains Mono', monospace" font-size="13" fill="#cbd5e1">ATS Match Compatibility</text>
+  <text x="545" y="285" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="18" font-weight="700" fill="#10b981">94.8%</text>
+
+  <!-- Progress Bar -->
+  <rect x="230" y="325" width="340" height="8" rx="4" fill="#334155" />
+  <rect x="230" y="325" width="320" height="8" rx="4" fill="url(#aiGlow)" />
+
+  <!-- Metrics Badges -->
+  <rect x="230" y="355" width="98" height="40" rx="8" fill="#1e293b" />
+  <text x="279" y="380" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#38bdf8">NLP Parsing</text>
+
+  <rect x="350" y="355" width="100" height="40" rx="8" fill="#1e293b" />
+  <text x="400" y="380" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#a855f7">GPT-4 Turbo</text>
+
+  <rect x="470" y="355" width="100" height="40" rx="8" fill="#1e293b" />
+  <text x="520" y="380" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#f43f5e">Mock AI Q&amp;A</text>
+</svg>

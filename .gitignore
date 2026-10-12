@@ -1,0 +1,19 @@
+# Dependencies & local runtimes
+node/
+node_modules/
+package.json
+package-lock.json
+
+# Local scripts & backups
+*.bak
+*.ps1
+*.bat
+
+# Firebase local tool files
+firebase.exe
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

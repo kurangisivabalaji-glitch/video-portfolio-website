@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="puzBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#311042" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="tileGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+    <linearGradient id="tileGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#puzBg)" />
+  <circle cx="650" cy="150" r="160" fill="#a855f7" opacity="0.1" />
+
+  <!-- Info Board Left -->
+  <g transform="translate(100, 110)">
+    <text x="0" y="30" font-family="'Segoe UI', sans-serif" font-size="28" font-weight="800" fill="#f8fafc">15-Tile Puzzle</text>
+    <text x="0" y="55" font-family="'Segoe UI', sans-serif" font-size="14" fill="#94a3b8">Interactive Logic Challenge</text>
+
+    <!-- Stat 1: Moves -->
+    <rect x="0" y="85" width="160" height="60" rx="12" fill="rgba(15, 23, 42, 0.8)" stroke="rgba(139, 92, 246, 0.3)" stroke-width="1" />
+    <text x="16" y="110" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8">MOVES</text>
+    <text x="16" y="134" font-family="'Segoe UI', sans-serif" font-size="20" font-weight="700" fill="#c084fc">18</text>
+
+    <!-- Stat 2: Time -->
+    <rect x="0" y="160" width="160" height="60" rx="12" fill="rgba(15, 23, 42, 0.8)" stroke="rgba(6, 182, 212, 0.3)" stroke-width="1" />
+    <text x="16" y="185" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94a3b8">TIME</text>
+    <text x="16" y="209" font-family="'Segoe UI', sans-serif" font-size="20" font-weight="700" fill="#38bdf8">01:42</text>
+
+    <!-- Shuffle Button -->
+    <rect x="0" y="238" width="160" height="42" rx="10" fill="linear-gradient(to right, #8b5cf6, #ec4899)" />
+    <text x="80" y="264" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#fff">🔀 Reshuffle</text>
+  </g>
+
+  <!-- Puzzle 3x3 Grid Frame -->
+  <g transform="translate(390, 60)">
+    <rect x="0" y="0" width="350" height="350" rx="20" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(139, 92, 246, 0.4)" stroke-width="1.5" />
+
+    <!-- 3x3 tiles -->
+    <!-- Row 1 -->
+    <rect x="20" y="20" width="90" height="90" rx="14" fill="url(#tileGrad)" />
+    <text x="65" y="74" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="30" font-weight="800" fill="#fff">1</text>
+
+    <rect x="130" y="20" width="90" height="90" rx="14" fill="url(#tileGrad)" />
+    <text x="175" y="74" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="30" font-weight="800" fill="#fff">2</text>
+
+    <rect x="240" y="20" width="90" height="90" rx="14" fill="url(#tileGrad)" />
+    <text x="285" y="74" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="30" font-weight="800" fill="#fff">3</text>
+
+    <!-- Row 2 -->
+    <rect x="20" y="130" width="90" height="90" rx="14" fill="url(#tileGrad)" />
+    <text x="65" y="184" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="30" font-weight="800" fill="#fff">4</text>
+
+    <rect x="130" y="130" width="90" height="90" rx="14" fill="url(#tileGrad)" />
+    <text x="175" y="184" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="30" font-weight="800" fill="#fff">5</text>
+
+    <rect x="240" y="130" width="90" height="90" rx="14" fill="url(#tileGrad)" />
+    <text x="285" y="184" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="30" font-weight="800" fill="#fff">6</text>
+
+    <!-- Row 3 -->
+    <rect x="20" y="240" width="90" height="90" rx="14" fill="url(#tileGrad2)" />
+    <text x="65" y="294" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="30" font-weight="800" fill="#fff">7</text>
+
+    <rect x="130" y="240" width="90" height="90" rx="14" fill="url(#tileGrad2)" />
+    <text x="175" y="294" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="30" font-weight="800" fill="#fff">8</text>
+
+    <!-- Empty Tile Slot (dashed) -->
+    <rect x="240" y="240" width="90" height="90" rx="14" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 255, 255, 0.2)" stroke-dasharray="6,4" stroke-width="1.5" />
+    <text x="285" y="292" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="14" fill="#64748b">Slot</text>
+  </g>
+</svg>

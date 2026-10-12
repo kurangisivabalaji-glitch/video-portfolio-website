@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="medBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#042f2e" />
+      <stop offset="100%" stop-color="#021a19" />
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d9488" />
+      <stop offset="100%" stop-color="#14b8a6" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#medBg)" />
+  <circle cx="400" cy="240" r="190" fill="#14b8a6" opacity="0.1" />
+
+  <!-- Medical Card -->
+  <rect x="180" y="65" width="440" height="360" rx="20" fill="#134e4a" stroke="rgba(20, 184, 166, 0.4)" stroke-width="2" />
+  
+  <!-- Header -->
+  <rect x="180" y="65" width="440" height="48" rx="20" fill="#0f766e" />
+  <text x="210" y="95" font-family="sans-serif" font-size="14" font-weight="700" fill="#ffffff">ðŸ¥ TeleHealth Care &amp; Patient Portal</text>
+  <text x="590" y="95" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="11" fill="#99f6e4">HIPAA Verified</text>
+
+  <!-- Video Call Preview Window -->
+  <rect x="210" y="135" width="380" height="150" rx="14" fill="#042f2e" stroke="rgba(255,255,255,0.1)" />
+  <circle cx="400" cy="190" r="32" fill="#14b8a6" opacity="0.3" />
+  <text x="400" y="200" text-anchor="middle" font-family="sans-serif" font-size="28">ðŸ‘¨â€âš•ï¸</text>
+  <text x="400" y="240" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="600" fill="#99f6e4">Live Doctor Consultation (WebRTC)</text>
+  <rect x="230" y="150" width="70" height="22" rx="6" fill="#ef4444" />
+  <text x="265" y="165" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#fff">â— LIVE</text>
+
+  <!-- Appointment Details -->
+  <rect x="210" y="305" width="180" height="85" rx="12" fill="#115e59" />
+  <text x="225" y="330" font-family="sans-serif" font-size="11" fill="#ccfbf1">SCHEDULED VISIT</text>
+  <text x="225" y="352" font-family="sans-serif" font-size="14" font-weight="700" fill="#fff">Dr. S. K. Sharma</text>
+  <text x="225" y="372" font-family="'JetBrains Mono', monospace" font-size="11" fill="#5eead4">Cardiology â€¢ 10:30 AM</text>
+
+  <rect x="410" y="305" width="180" height="85" rx="12" fill="#115e59" />
+  <text x="425" y="330" font-family="sans-serif" font-size="11" fill="#ccfbf1">E-PRESCRIPTION</text>
+  <text x="425" y="352" font-family="sans-serif" font-size="14" font-weight="700" fill="#fff">Active Medicines</text>
+  <text x="425" y="372" font-family="'JetBrains Mono', monospace" font-size="11" fill="#4ade80">âœ“ Refill Ready</text>
+</svg>
