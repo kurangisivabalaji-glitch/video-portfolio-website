@@ -2,9 +2,8 @@
 
 A modern, high-performance personal developer portfolio featuring interactive project showcases, full-stack application demonstrations, verified certification galleries, lanyard ID badge, and a video hero experience.
 
-## 🚀 Live Demos
-- **Firebase Hosting**: [https://portfolio-d7827.web.app](https://portfolio-d7827.web.app)
-- **Netlify**: Continuous deployment via GitHub
+## 🚀 Deployment
+- **Netlify**: Continuous deployment via GitHub main branch
 
 ## 🛠 Tech Stack
 - **Frontend**: React 18, HTML5, Vanilla CSS & Tailwind CSS, Babel Standalone
